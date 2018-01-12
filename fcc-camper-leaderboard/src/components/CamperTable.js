@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 
 const CamperTable = (props) => {
 
-    if(!props.users){
+    if (!props.users) {
         return <div> Loading ... </div>
     }
 
     console.log("Props.users : ", props.users)
 
-    const campers = props.users.map(function(user,i){
+    const campers = props.users.map(function (user, i) {
         return (
             <tr key={i}>
                 <td>{i}</td>
