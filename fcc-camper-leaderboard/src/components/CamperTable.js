@@ -6,13 +6,19 @@ const CamperTable = (props) => {
         return <div> Loading ... </div>
     }
 
-    console.log("Props.users : ", props.users)
+    const verticalAlign = {
+        marginBottom: "15px"
+    }
+
+    const img = {
+        paddingRight: "15px"
+    }
 
     const campers = props.users.map(function (user, i) {
         return (
             <tr key={i}>
-                <td>{i}</td>
-                <td><img src={user.img} height="30" width="30" alt="img" ></img>{user.username}</td>
+                <td>{i+1}</td>
+                <td><img style={img} src={user.img} height="30" width="30" alt="img" ></img><span style={verticalAlign}>{user.username}</span></td>
                 <td>{user.recent}</td>
                 <td>{user.alltime}</td>
             </tr>
